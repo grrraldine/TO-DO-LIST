@@ -9,11 +9,22 @@
 <body>
     <div class="todo-container">
         <h1>Lista de Tareas</h1>
-        <input type="text" id="new-task" placeholder="Añadir una nueva tarea...">
-        <button id="add-task-btn">Agregar</button>
+        <form id="todo-form">
+            <input type="text" id="new-task" placeholder="Añadir una nueva tarea..." />
+            <input type="submit" value="Agregar" id="add-task-btn" />
+        </form>
         <ul id="task-list"></ul>
-    </div>
 
+        <div id="completion-message" class="completion-container" style="display: none;">
+            <img src="assets/foxy.png" alt="Felicidades" class="completion-image">
+            <p class="completion-text">Mereces un descanso, completaste todas tus tareas:) </p>
+        </div>
+
+        <div id="coffee-message" class="coffee-container" style="display: none;">
+            <img src="assets/coffee.png" alt="Tómate un café" class="coffee-image">
+            <p class="coffee-text">Es un buen momento para tomarte un break </p>
+        </div>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
